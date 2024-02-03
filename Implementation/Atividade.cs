@@ -31,9 +31,9 @@ namespace ATIVIDADE_1.Implementation
             Console.WriteLine($"Maior número inicial: {maiorNumeroInicial}");
             Console.WriteLine($"Tamanho da sequência: {maiorSequencia}");
         }
-        
+
         //função que calcula o tamanho da sequencia de collatz para um numero inicial
-        static int CalcularSequenciaCollatz(int numeroInicial, Dictionary<int, int> sequencias, int profundidade = 0, HashSet<int> visitados = null)
+        private static int CalcularSequenciaCollatz(int numeroInicial, Dictionary<int, int> sequencias, int profundidade = 0, HashSet<int> visitados = null)
         {
             if (visitados == null)
                 visitados = new HashSet<int>();
@@ -55,5 +55,75 @@ namespace ATIVIDADE_1.Implementation
 
             return sequenciaAtual;
         }
+
+        //ATIVIDADE 1.2
+        public static void Atividade_2()
+        {
+            int[] numeros = { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 };
+
+            Console.WriteLine("array: ");
+
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+
+            Console.WriteLine("---------------------------------------------------");
+
+            bool todosImpares = ContemSomenteImpares(numeros);
+
+            if (todosImpares)
+            {
+                Console.WriteLine("o array contem somente numeros impares");
+            }
+            else
+            {
+                Console.WriteLine("o array contem numeros pares e impares");
+            }
+
+            Console.WriteLine("---------------------------------------------------");
+
+            Console.WriteLine("Números ímpares: ");
+
+            var numerosImpares = ObterNumerosImpares(numeros);
+
+            foreach (var numero in numerosImpares)
+            {
+                Console.WriteLine(numero);
+            }
+        }
+
+        private static bool ContemSomenteImpares(int[] numeros)
+        {
+            return numeros.All(numero => numero % 2 != 0);
+        }
+
+        private static IEnumerable<int> ObterNumerosImpares(int[] numeros)
+        {
+            return numeros.Where(numero => numero % 2 != 0);
+        }
+
+        //ATIVIDADE 1.3
+        public static void Atividade_3()
+        {
+            int[] primeiroArray = { 1, 3, 7, 29, 42, 98, 234, 93 };
+            int[] segundoArray = { 4, 6, 93, 7, 55, 32, 3 };
+            
+            Console.WriteLine($"primeiro array: {{{string.Join(", ", primeiroArray)}}}");
+
+            Console.WriteLine($"segundo array: {{{string.Join(", ", segundoArray)}}}");
+
+            Console.WriteLine("---------------------------------------------------");
+
+            Console.WriteLine("numeros do primeiro array que nao estao contidos no segundo array");
+
+            var elementosDistintos = primeiroArray.Except(segundoArray);
+
+            foreach (var elementoDistinto in elementosDistintos)
+            {
+                Console.WriteLine(elementoDistinto);
+            }
+        }
+
     }
 }

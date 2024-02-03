@@ -46,10 +46,21 @@ namespace ATIVIDADE_1
 
                             case 2:
 
+                                Implementation.Atividade.Atividade_2();
+
+                                Console.WriteLine("----------------------------------------------");
+
+                                Inicia();
+
                                 break;
 
                             case 3:
 
+                                Implementation.Atividade.Atividade_3();
+
+                                Console.WriteLine("----------------------------------------------");
+
+                                Inicia();
                                 break;
 
                             default:
