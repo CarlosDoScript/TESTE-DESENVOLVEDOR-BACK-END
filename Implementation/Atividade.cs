@@ -28,8 +28,8 @@ namespace ATIVIDADE_1.Implementation
                 }
             }
 
-            Console.WriteLine($"Maior número inicial: {maiorNumeroInicial}");
-            Console.WriteLine($"Tamanho da sequência: {maiorSequencia}");
+            Console.WriteLine($"maior numero inicial: {maiorNumeroInicial}");
+            Console.WriteLine($"tamanho da sequencia: {maiorSequencia}");
         }
 
         //função que calcula o tamanho da sequencia de collatz para um numero inicial
@@ -61,12 +61,7 @@ namespace ATIVIDADE_1.Implementation
         {
             int[] numeros = { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 };
 
-            Console.WriteLine("array: ");
-
-            foreach (var numero in numeros)
-            {
-                Console.WriteLine(numero);
-            }
+            Console.WriteLine($"array: {{ {string.Join(", ", numeros)} }}");
 
             Console.WriteLine("---------------------------------------------------");
 
@@ -109,9 +104,9 @@ namespace ATIVIDADE_1.Implementation
             int[] primeiroArray = { 1, 3, 7, 29, 42, 98, 234, 93 };
             int[] segundoArray = { 4, 6, 93, 7, 55, 32, 3 };
             
-            Console.WriteLine($"primeiro array: {{{string.Join(", ", primeiroArray)}}}");
+            Console.WriteLine($"primeiro array: {{ {string.Join(", ", primeiroArray)} }}");
 
-            Console.WriteLine($"segundo array: {{{string.Join(", ", segundoArray)}}}");
+            Console.WriteLine($"segundo array: {{ {string.Join(", ", segundoArray)} }}");
 
             Console.WriteLine("---------------------------------------------------");
 
