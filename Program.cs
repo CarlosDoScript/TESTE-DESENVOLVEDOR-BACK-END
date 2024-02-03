@@ -61,6 +61,7 @@ namespace ATIVIDADE_1
                                 Console.WriteLine("----------------------------------------------");
 
                                 Inicia();
+
                                 break;
 
                             default:
