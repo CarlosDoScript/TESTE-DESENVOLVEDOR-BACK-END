@@ -24,9 +24,9 @@ namespace ATIVIDADE_1
                 Console.WriteLine("3 - ATIVIDADE 1.3");
                 Console.WriteLine("----------------------------------------------");
 
-                string input = Console.ReadLine();
+                string entrada = Console.ReadLine();
 
-                if (int.TryParse(input, out atividadeEscolha))
+                if (int.TryParse(entrada, out atividadeEscolha))
                 {
                     if (atividadeEscolha >= 1 && atividadeEscolha <= 3)
                     {
